@@ -7,6 +7,8 @@
 		"zen.view.sidebar-expanded" = true;
 		"zen.view.sidebar-expanded.max-width" = 200;
 		"zen.view.window.scheme" = 0;
+        "zen.theme.content-element-separation" = 0;
+        "layout.css.devPixelsPerPx" = 1.5;
 
 		"layout.spellcheckDefault" = 0;
 		"zen.workspaces.continue-where-left-off" = true;

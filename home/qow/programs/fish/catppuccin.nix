@@ -1,1 +1,6 @@
-{ catppuccin.fish.enable = true; }
+{
+	catppuccin.fish = {
+		enable = true;
+		flavor = "mocha";
+	};
+}

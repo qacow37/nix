@@ -1,7 +1,7 @@
 {
 	description = "NixOS Flake for my System";
 	inputs = {
-		nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+        nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 		home-manager = {
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
@@ -25,14 +25,6 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 			inputs.nixpkgs-nixcord.follows = "nixpkgs";
 		};
-		spicetify = {
-			url = "github:Gerg-L/spicetify-nix";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
-		yazi = {
-			url = "github:sxyazi/yazi";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
 		nixvim = {
 			url = "github:nix-community/nixvim";
 			inputs.nixpkgs.follows = "nixpkgs";
@@ -41,16 +33,16 @@
 			url = "github:epireyn/niri-flake";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-		prismlauncher-nix = {
-			url = "path:/home/qow/projects/prismlauncher-nix";
+		prismnix = {
+			url = "path:/home/qow/projects/prismnix/";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 	};
 
-	outputs = {self, nixpkgs, home-manager, ...}@inputs:
+	outputs = {nixpkgs, home-manager, ...}@inputs:
 	let
 		defaultSpecialArgs = {
-			flake = self;
+            root = ./.;
 			inputs = inputs;
 		};
 	in
@@ -74,15 +66,20 @@
 		};
 		homeConfigurations = {
 			"qow" = home-manager.lib.homeManagerConfiguration {
-				pkgs = import nixpkgs {system = "x86_64-linux";};
+				pkgs = import nixpkgs {
+					system = "x86_64-linux";
+					overlays = [
+						inputs.prismnix.overlays.default
+					];
+					config.allowUnfree = true;
+				};
 				modules = [
 					inputs.catppuccin.homeModules.catppuccin
-					inputs.spicetify.homeManagerModules.spicetify
 					inputs.zen-browser.homeModules.beta
 					inputs.nixvim.homeModules.nixvim
 					inputs.nixcord.homeModules.nixcord
 					inputs.niri.homeModules.niri
-					inputs.prismlauncher-nix.homeModules.prismlauncher-nix
+					inputs.prismnix.homeModules.prismnix
 					./home/qow
 				];
 				extraSpecialArgs = defaultSpecialArgs;

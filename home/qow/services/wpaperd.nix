@@ -1,9 +1,9 @@
-{flake, ...}:
+{root, ...}:
 {
 	services.wpaperd =
 	let
 		wallpaper = {
-			path = "${flake}/assets/background.png";
+			path = root + /assets/background0.png;
 			mode = "center";
 		};
 	in

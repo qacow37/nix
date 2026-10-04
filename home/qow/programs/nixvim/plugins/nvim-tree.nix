@@ -6,7 +6,7 @@
 			disable_netrw = true;
 
 			view = {
-				width = 40;
+				width = 30;
 				side = "left";
 			};
 			renderer = {
@@ -39,6 +39,10 @@
 					# This will then conflict with CTRL+O.
 					enable = false;
 				};
+			};
+
+			notify = {
+				threshold.__raw = "vim.log.levels.WARN";
 			};
 		};
 	};

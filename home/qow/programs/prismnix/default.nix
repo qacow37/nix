@@ -1,7 +1,7 @@
 {
 	imports = [./instances];
 
-	programs.prismlauncher-nix = {
+	programs.prismnix = {
 		enable = true;
 	};
 }

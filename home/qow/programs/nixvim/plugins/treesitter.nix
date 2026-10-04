@@ -12,6 +12,7 @@
 			nix
 			json
 			toml
+            cpp
 		];
 	};
 }

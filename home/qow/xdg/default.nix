@@ -1,6 +1,5 @@
 {
 	imports = [
-		./autostart.nix
 		./portal.nix
 		./userDirs.nix
 	];

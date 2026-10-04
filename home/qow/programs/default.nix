@@ -2,16 +2,15 @@
 	imports = [
 		./fastfetch
 		./fish
-		# nixpkgs option only
-		# ./gamescope
 		./git
 		./kitty
 		./mangohud
+		./myrmpc
 		./niri
 		./nixcord
 		./nixvim
-		./prismlauncher-nix
-		./spicetify
+		./prismnix
+		./quickshell
 		./starship
 		./yazi
 		./zen-browser

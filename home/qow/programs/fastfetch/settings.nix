@@ -1,4 +1,4 @@
-{flake, ...}:
+{root, ...}:
 {
 	programs.fastfetch.settings = {
 		display = {
@@ -19,21 +19,19 @@
 
 		logo = {
 			type = "kitty";
-			source = "${flake}/assets/fastfetch/logo.png";
+			source = root + /assets/fastfetch/logo.png;
 			preserveAspectRatio = true;
 
 			height = 6;
 			padding = {
 				top   = 1;
-				left  = 3;
-				right = 5;
+				left  = 1;
+				right = 4;
 			};
 		};
 
 		modules = [
 			{
-				# Catccuppin
-				# User: Peach
 				type = "title";
 				format = "{##fe640b}{user-name}@{host-name}";
 			}
@@ -41,34 +39,25 @@
 				type = "os";
 				key = "sys";
 				format = "{pretty-name}";
-
-				# Catccuppin
-				# Rosewater
-				keyColor = "#dc8a78";
+				keyColor = "#cba6f7";
 			}
 			{
 				type = "kernel";
 				key = "ker";
 				format = "{release}";
-
-				# Catccuppin
-				# Flamingo
-				keyColor = "#dd7878";
+				keyColor = "#d97eb5";
 			}
 			{
 				type = "packages";
 				key = "pkg";
 				format = "{all}";
-				keyColor = "#d84c54";
+				keyColor = "#da5375";
 			}
 
 			{
 				type = "cpu";
 				key = "cpu";
 				format = "{name}";
-
-				# Catccuppin
-				# Red
 				keyColor = "#d20f39";
 			}
 			{
@@ -76,19 +65,13 @@
 				key = "gpu";
 				format = "{name}";
 				hideType = "integrated";
-
-				# Catccuppin
-				# Maroon
-				keyColor = "#e64553";
+				keyColor = "#e13630";
 			}
 			{
 				type = "memory";
 				key = "mem";
 				format = "{used}/{total}";
-
-				# Catccuppin
-				# Peach
-				keyColor = "#fe640b";
+				keyColor = "#f04f23";
 			}
 		];
 	};

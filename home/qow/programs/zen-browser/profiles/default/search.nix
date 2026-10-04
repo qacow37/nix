@@ -18,7 +18,16 @@
 						template = "https://mynixos.com/search?q={searchTerms}";
 					}
 				];
-				definedAliases = ["@nix"];
+				definedAliases = ["@mynix"];
+			};
+			"noogle" = {
+				name = "Noogle";
+				urls = [
+					{
+						template = "https://noogle.dev/q/?term={searchTerms}";
+					}
+				];
+				definedAliases = ["@nog"];
 			};
 			"steamdb" = {
 				name = "SteamDB";
@@ -27,26 +36,36 @@
 						template = "https://steamdb.info/search/?q={searchTerms}";
 					}
 				];
-				definedAliases = ["@steam"];
+				definedAliases = ["@steamdb"];
 			};
 			"protondb" = {
 				name = "ProtonDB";
 				urls = [
 					{
-						template = "https://www.protondb.com/search?q={searchTerms}";
+						template = "https://protondb.com/search?q={searchTerms}";
 					}
 				];
-				definedAliases = ["@proton"];
+				definedAliases = ["@protondb"];
 			};
 			"reddit" = {
 				name = "Reddit";
 				urls = [
 					{
-						template = "https://www.reddit.com/search/?q={searchTerms}";
+						template = "https://reddit.com/search/?q={searchTerms}";
 					}
 				];
 				definedAliases = ["@rdd"];
 			};
+
+            "love2d" = {
+                name = "Löve";
+                urls = [
+                    {
+                        template = "https://love2d.org/w/index.php?search={searchTerms}";
+                    }
+                ];
+                definedAliases = ["@lov"];
+            };
 		};
 	};
 }

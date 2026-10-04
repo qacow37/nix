@@ -1,7 +1,5 @@
 {
 	imports = [
-		./catppuccin.nix
-
 		./settings.nix
 	];
 	programs.starship = {

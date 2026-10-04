@@ -1,8 +1,7 @@
 {
 	imports = [
-		./catppuccin.nix
-
 		./extraConfig
+		./catppuccin.nix
 	];
 	programs.kitty = {
 		enable = true;

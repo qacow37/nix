@@ -1,7 +1,7 @@
 {
 	programs.nixvim.opts = {
 		# General opts
-		expandtab = false;
+		expandtab = true;
 		shiftwidth = 4;
 		tabstop = 4;
 		softtabstop = 4;

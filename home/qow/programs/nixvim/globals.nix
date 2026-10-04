@@ -1,7 +1,6 @@
-{lib, pkgs, ...}:
+{config, ...}:
 {
 	programs.nixvim.globals = {
-		rust_recommended_style = false;
 		mapleader = " ";
 		loaded_netrw = 1;
 		loaded_netrwPlugin = 1;
@@ -9,12 +8,12 @@
 		clipboard = {
 			name = "wl-clipboard";
 			copy = {
-				"+" = "${lib.getExe' pkgs.wl-clipboard-rs "wl-copy"}";
-				"*" = "${lib.getExe' pkgs.wl-clipboard-rs "wl-copy"}";
+				"+" = config.home.clipboard.command.copy;
+				"*" = config.home.clipboard.command.copy;
 			};
 			paste = {
-				"+" = "${lib.getExe' pkgs.wl-clipboard-rs "wl-paste"} --no-newline";
-				"*" = "${lib.getExe' pkgs.wl-clipboard-rs "wl-paste"} --no-newline --primary";
+				"+" = config.home.clipboard.command.paste;
+				"*" = config.home.clipboard.command.paste;
 			};
 			cache_enabled = true;
 		};

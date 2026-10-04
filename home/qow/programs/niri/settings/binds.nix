@@ -14,7 +14,7 @@
 			action.spawn = "kitty";
 			repeat = false;
 		};
-		
+
 		"Mod+H"     .action.focus-column-left             = [];
 		"Mod+L"     .action.focus-column-right            = [];
 		"Mod+J"     .action.focus-workspace-down          = [];
@@ -23,10 +23,24 @@
 		"Mod+Ctrl+L".action.move-column-right             = [];
 		"Mod+Ctrl+J".action.move-column-to-workspace-down = [];
 		"Mod+Ctrl+K".action.move-column-to-workspace-up   = [];
-		"Mod+M"     .action.switch-preset-column-width    = [];
 
-		"Mod+N".action.focus-monitor-next = [];
-		"Mod+Ctrl+N".action.move-column-to-monitor-next = [];
+		"Mod+M" = {
+			action.switch-preset-column-width = [];
+			repeat = false;
+		};
+		"Mod+Shift+M" = {
+			action.fullscreen-window = [];
+			repeat = false;
+		};
+
+		"Mod+N" = {
+			action.focus-monitor-next = [];
+			repeat = false;
+		};
+		"Mod+Ctrl+N" = {
+			action.move-column-to-monitor-next = [];
+			repeat = false;
+		};
 
 		"Mod+U" = {
 			action.close-window = [];

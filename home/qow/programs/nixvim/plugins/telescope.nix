@@ -37,6 +37,7 @@
 					# sort most recent used
 					sort_mru = true;
 					initial_mode = "normal";
+					ignore_current_buffer = true;
 				};
 				registers = {
 					initial_mode = "normal";

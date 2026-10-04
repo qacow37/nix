@@ -63,16 +63,17 @@
 				name = "tools";
 				bookmarks = [
 					{
-						name = "braveai";
-						url = "https://search.brave.com/ask";
-					}
-					{
 						name = "deepl";
 						url = "https://deepl.com";
 					}
 					{
 						name = "speedtest";
 						url = "https://speedtest.net";
+					}
+
+					{
+						name = "chosic";
+						url = "https://chosic.com";
 					}
 				];
 			}
@@ -87,9 +88,19 @@
 						name = "protondb";
 						url = "https://protondb.com";
 					}
+
 					{
 						name = "nixvim";
 						url = "https://nix-community.github.io/nixvim/";
+					}
+
+					{
+						name = "myanimelist";
+						url = "https://myanimelist.net";
+					}
+					{
+						name = "anilist";
+						url = "https://anilist.co";
 					}
 				];
 			}

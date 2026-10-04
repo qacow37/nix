@@ -1,1 +1,7 @@
-{ catppuccin.yazi.enable = true; }
+{
+	catppuccin.yazi = {
+		enable = false;
+		accent = "flamingo";
+		flavor = "mocha";
+	};
+}

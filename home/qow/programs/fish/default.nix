@@ -1,8 +1,8 @@
 {
 	imports = [
-		./catppuccin.nix
-		
 		./functions
+		./shellAliases.nix
+		./catppuccin.nix
 	];
 	programs.fish = {
 		enable = true;

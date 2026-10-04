@@ -1,19 +1,23 @@
 {
 	imports = [
-		./extensions.nix
-		./preferences.nix
+		./ExtensionSettings.nix
+		./Preferences.nix
+		./SearchEngines.nix
 	];
 
 	programs.zen-browser.policies = {
 		AutofillAddressEnabled = false;
 		AutofillCreditCardEnabled = false;
 		OfferToSaveLogins = false;
+		PasswordManagerEnabled = false;
 
 		DisableAppUpdate = true;
 		DisableFeedbackCommands = true;
 		DisableFirefoxStudies = true;
 		DisablePocket = true;
 		DisableTelemetry = true;
+		DisableAccounts = true;
+		DisableFirefoxAccounts = true;
 		DontCheckDefaultBrowser = true;
 
 		EnableTrackingProtection = {

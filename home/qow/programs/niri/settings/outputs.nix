@@ -10,6 +10,10 @@
 			position = {x = 1280; y = 0;};
 			scale = 1;
 			focus-at-startup = true;
+
+			layout = {
+				gaps = 250;
+			};
 		};
 		"DP-2" = {
 			enable = true;
@@ -20,6 +24,10 @@
 			};
 			position = {x=0;y=0;};
 			scale = 1;
+
+			layout = {
+				gaps = 0;
+			};
 		};
 	};
 }

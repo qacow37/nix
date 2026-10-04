@@ -3,6 +3,7 @@
 		./cmp.nix
 		./comment.nix
 		./crates.nix
+        ./image.nix
 		./lsp.nix
 		./lualine.nix
 		./nvim-autopairs.nix

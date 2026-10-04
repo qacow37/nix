@@ -6,7 +6,34 @@
 			action = "<Nop>";
 		}
 
+		{
+			mode = "i";
+			key = "jj";
+			action = "<Esc>";
+		}
+
 		# Navigation
+		{
+			mode = "n";
+			key = "<M-h>";
+			action = "b";
+		}
+		{
+			mode = "n";
+			key = "<M-l>";
+			action = "w";
+		}
+		{
+			mode = "n";
+			key = "w";
+			action = "<Nop>";
+		}
+		{
+			mode = "n";
+			key = "b";
+			action = "<Nop>";
+		}
+
 		{
 			mode = "i";
 			key = "<M-h>";

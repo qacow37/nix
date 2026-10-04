@@ -1,5 +1,5 @@
 {
-	xdg.autostart = {
+	services.mpd-mpris = {
 		enable = true;
 	};
 }

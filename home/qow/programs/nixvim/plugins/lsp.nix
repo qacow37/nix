@@ -1,3 +1,4 @@
+{pkgs, ...}:
 {
 	programs.nixvim.plugins.lsp = {
 		enable = true;
@@ -7,14 +8,27 @@
 				installCargo = false;
 				installRustc = false;
 
-				# diagnostics = {
-				# 	enable = true;
-				# };
+                # settings = {
+                #     check = {
+                #         command = "${pkgs.clippy}";
+                #     };
+                # };
 			};
 			nixd = {
 				enable = true;
 			};
 			emmylua_ls = {
+				enable = true;
+                settings = {
+                    filetypes = ["lua"];
+                    root_markers = [
+                        ".emmyrc.json"
+                        ".luarc.json"
+                        ".git"
+                    ];
+                };
+			};
+			qmlls = {
 				enable = true;
 			};
 		};

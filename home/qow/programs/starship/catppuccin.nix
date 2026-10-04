@@ -1,1 +1,0 @@
-{ catppuccin.starship.enable = true; }
