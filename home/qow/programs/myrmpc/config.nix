@@ -38,8 +38,8 @@
 					"<C-d>": DownHalf,
 					"K": MoveUp,
 					"J": MoveDown,
-					"gu": Top,
-					"gd": Bottom,
+					"gg": Top,
+					"G": Bottom,
 
 					"<Space>": Select,
 					"<C-Space>": InvertSelection,

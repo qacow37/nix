@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{config, ...}:
 {
 	programs.nixvim.plugins.lsp = {
 		enable = true;
@@ -10,6 +10,7 @@
 
                 # settings = {
                 #     check = {
+                #         # Requires `lib.getExe`
                 #         command = "${pkgs.clippy}";
                 #     };
                 # };
@@ -31,6 +32,16 @@
 			qmlls = {
 				enable = true;
 			};
+            roslyn_ls = {
+                enable = true;
+            };
+
+            tinymist = {
+                enable = true;
+                settings = {
+                    fontPaths = config.home.fonts.fontPaths;
+                };
+            };
 		};
 	};
 }

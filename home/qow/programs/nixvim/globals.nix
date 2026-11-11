@@ -17,5 +17,7 @@
 			};
 			cache_enabled = true;
 		};
+
+        gdscript_recommended_style = false;
 	};
 }

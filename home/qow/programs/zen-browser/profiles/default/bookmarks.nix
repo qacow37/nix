@@ -57,6 +57,15 @@
 						name = "github";
 						url = "https://github.com";
 					}
+
+                    {
+                        name = "spotify";
+                        url = "https://spotify.com";
+                    }
+                    {
+                        name = "soundcloud";
+                        url = "https://soundcloud.com";
+                    }
 				];
 			}
 			{
@@ -75,6 +84,10 @@
 						name = "chosic";
 						url = "https://chosic.com";
 					}
+                    {
+                        name = "songfinder";
+                        url = "https://songfinder.gg";
+                    }
 				];
 			}
 			{

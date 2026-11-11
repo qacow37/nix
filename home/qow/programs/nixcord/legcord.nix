@@ -8,7 +8,6 @@
 			mods = [];
 			hardwareAcceleration = true;
 			minimizeToTray = false;
-			tray = "none";
 		};
 	};
 }

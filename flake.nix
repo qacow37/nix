@@ -23,10 +23,10 @@
 		nixcord = {
 			url = "github:FlameFlag/nixcord";
 			inputs.nixpkgs.follows = "nixpkgs";
-			inputs.nixpkgs-nixcord.follows = "nixpkgs";
 		};
 		nixvim = {
-			url = "github:nix-community/nixvim";
+            # url = "github:nix-community/nixvim";
+            url = "github:qacow37/nixvim";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 		niri = {
@@ -34,9 +34,13 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 		prismnix = {
-			url = "path:/home/qow/projects/prismnix/";
+			url = "github:qacow37/prismnix";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+        spicetify = {
+            url = "github:Gerg-L/spicetify-nix";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 	};
 
 	outputs = {nixpkgs, home-manager, ...}@inputs:
@@ -80,6 +84,7 @@
 					inputs.nixcord.homeModules.nixcord
 					inputs.niri.homeModules.niri
 					inputs.prismnix.homeModules.prismnix
+                    inputs.spicetify.homeManagerModules.spicetify
 					./home/qow
 				];
 				extraSpecialArgs = defaultSpecialArgs;

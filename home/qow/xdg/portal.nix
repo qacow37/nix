@@ -4,7 +4,7 @@
 	# at some point, BUT NOT GTK!
 
 	xdg.portal = {
-		enable = lib.mkForce false;
+        enable = lib.mkForce false;
 
 		# # mkForce because we dont want to install
 		# # Gnome Portal because of Niri-Flake

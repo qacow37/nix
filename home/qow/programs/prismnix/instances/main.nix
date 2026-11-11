@@ -1,23 +1,5 @@
 {pkgs, ...}:
 {
-    # programs.prismnix.instances.test = {
-    #     minecraft = {
-    #         enable = true;
-    #         modpack = {
-    #             enable = true;
-    #             package = pkgs.prismnix.mkModrinthPkg {
-    #                 name = "Homestead";
-    #                 type = "mrpack";
-    #                 id = "6HvKwSky";
-    #                 version = {
-    #                     id = "WMsE2fOj";
-    #                     file = "Homestead 1.3.7.mrpack";
-    #                     hash = "sha256-1b0B4mwLeDmlZTZP1q1roPSL2wDPlIQXpxSCbB9pZNo=";
-    #                 };
-    #             };
-    #         };
-    #     };
-    # };
 	programs.prismnix.instances.main = {
 		minecraft = {
 			enable = true;
@@ -27,6 +9,7 @@
 				enable = true;
 				loader = "fabric";
 			};
+			allowed-symlinks.enable = true;
 
 			mods = {
 				fabric-api.enable = true;
@@ -38,42 +21,40 @@
 							"minecraft:entity.enderman.death"   = 0.3;
 							"minecraft:entity.enderman.hurt"    = 0.3;
 							"minecraft:entity.enderman.scream"  = 0.3;
+                            "minecraft:entity.minecart.inside"  = 0.3;
 						};
 					};
 				};
 			};
 
-			allowed-symlinks.enable = true;
 			packages = with pkgs.prismnix; [
-				# Dependencies
-				yacl
-				malilib
-				fabric-language-kotlin
+                # Deps
+                yacl
+                malilib
+                fabric-language-kotlin
 
-				# Performance
-				sodium
-				entityculling
-				krypton
+                # Performance
+                sodium
+                entityculling
 
-				# Essentials
-				modmenu
-				cubes-without-borders
+                # Ambient
+                particle-rain
+                coolrain
+                better-clouds
 
-				# Utility
-				zoomify
-				freecam
-				minihud
-				# sound-controller
+                # Utility
+                modmenu
+                minihud
+                zoomify
+                anti-tool-break
+                freecam
 
-				# Atmosphere
-				particle-rain
-				better-clouds
-
-				# ResourcePacks
-				default-dark-mode
-				low-on-fire
-				programmer-art-fix
-				blaksuits-bushy-grass
+                # Resourcepack
+                default-dark-mode
+                simple-grass-flowers
+                enhanced-grass
+                low-on-fire
+                pacp
                 noendflash
 			];
 		};

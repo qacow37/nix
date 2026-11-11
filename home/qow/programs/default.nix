@@ -11,6 +11,7 @@
 		./nixvim
 		./prismnix
 		./quickshell
+        ./spicetify
 		./starship
 		./yazi
 		./zen-browser

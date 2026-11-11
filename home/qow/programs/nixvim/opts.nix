@@ -18,5 +18,11 @@
 		signcolumn = "yes:1";
 		pumheight = 7;
 		winborder = "rounded";
+
+        # Folding
+        foldmethod = "expr";
+        foldexpr = "v:lua.vim.treesitter.foldexpr()";
+        foldlevel = 99;
+        foldlevelstart = 99;
 	};
 }

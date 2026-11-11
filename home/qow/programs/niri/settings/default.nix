@@ -8,7 +8,7 @@
 		./xwayland-satellite.nix
 	];
 	programs.niri.settings = {
-		prefer-no-csd = true;
+        prefer-no-csd = true;
 
 		input.keyboard = {
 			repeat-delay = 150;
