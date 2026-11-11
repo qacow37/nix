@@ -3,7 +3,7 @@
 	services.wpaperd =
 	let
 		wallpaper = {
-			path = root + /assets/image4.png;
+			path = root + /assets/background.png;
 			mode = "center";
 		};
 	in
